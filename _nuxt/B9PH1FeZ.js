@@ -1,0 +1,1 @@
+import{o as t,c as n,a as o}from"./sl7OxbGw.js";const r={xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 58 58"};function l(s,e){return t(),n("svg",r,[...e[0]||(e[0]=[o("path",{id:"insta",d:"M0 0h58v58H0z"},null,-1),o("circle",{cx:"29",cy:"29",r:"29",fill:"currentColor"},null,-1)])])}const a={render:l};export{a as default,l as render};

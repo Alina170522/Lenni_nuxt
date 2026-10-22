@@ -1,0 +1,1 @@
+import{o as t,c as l,a as o}from"./sl7OxbGw.js";const n={xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24"};function r(c,e){return t(),l("svg",n,[...e[0]||(e[0]=[o("path",{id:"location",d:"M0 0h24v24H0z"},null,-1),o("circle",{cx:"12",cy:"12",r:"9",fill:"rgba(188, 51, 36, 1)"},null,-1)])])}const s={render:r};export{s as default,r as render};
