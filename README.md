@@ -1,75 +1,39 @@
-# Nuxt Minimal Starter
+# Lenni Art — сайт арт-пространства
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Многостраничный сайт арт-пространства на Nuxt 4: главная с блоками (о пространстве, предложения, ближайшие события, блог, контакты), афиша событий, страница события с формой бронирования.
 
-## Setup
+![Скриншот](docs/screenshot.png)
 
-Make sure to install dependencies:
+## Что реализовано
+- Главная страница из секций-компонентов (`AppHero`, `AppAbout`, `AppOffers`, `AppUpcoming`, `AppContacts` и др.)
+- Афиша: список событий и динамическая страница `/events/[event]`
+- Формы с валидацией на русском (VeeValidate), маски ввода (Maska), выбор даты (Air Datepicker)
+- Слайдер (Swiper), интерактивная карта (OpenLayers)
+- Модальные окна, библиотека полей формы (input, select, radio, checkbox, textarea)
+- Данные событий и блога лежат в `public/json`
+- Состояние: Pinia · стили: Less с миксинами · SVG как компоненты
 
+## Стек
+Nuxt 4 · Vue 3 · Pinia · VeeValidate · Swiper · OpenLayers · Less
+
+## Запуск
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev        # http://localhost:3000
+npm run build      # серверная сборка
+npm run generate   # статическая сборка
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+## Структура
+```
+app/
+├── components/   app/ (секции), event/, field/, page/, the/
+├── pages/        index, events, events/[event]
+├── stores/       Pinia
+├── plugins/      карта, маски, валидация
+└── styles/       переменные, миксины, блоки
+public/json/      данные событий и блога
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Автор
+Алина Штауб — [портфолио в Figma](https://www.figma.com/)

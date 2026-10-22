@@ -13,7 +13,7 @@
     class="home__listing"
     :moreLink="true"
     :grid="'column'"
-    :url="'http://localhost:3000/json/blog.json'"
+    :url="'/json/blog.json'"
       >
       
       <ArticleCard
