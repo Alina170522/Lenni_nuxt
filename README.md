@@ -2,6 +2,8 @@
 
 Многостраничный сайт арт-пространства на Nuxt 4: главная с блоками (о пространстве, предложения, ближайшие события, блог, контакты), афиша событий, страница события с формой бронирования.
 
+**Демо:** https://alina170522.github.io/Lenni_nuxt/
+
 ![Скриншот](docs/screenshot.png)
 
 ## Что реализовано
@@ -35,4 +37,11 @@ app/
 public/json/      данные событий и блога
 ```
 
-
+## Публикация на GitHub Pages
+Сайт публикуется из ветки `gh-pages`. Чтобы обновить:
+```bash
+# PowerShell: $env:NUXT_APP_BASE_URL="/Lenni_nuxt/"; npm run generate
+# bash:       NUXT_APP_BASE_URL=/Lenni_nuxt/ npm run generate
+# результат: .output/public
+```
+Затем содержимое собранной папки отправляется в ветку `gh-pages` (Settings → Pages → Deploy from a branch → `gh-pages` / root).

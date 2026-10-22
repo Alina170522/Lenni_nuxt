@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+const asset = useAsset();
 import { computed } from 'vue'
 
 const props = defineProps({
@@ -48,7 +49,7 @@ const props = defineProps({
 })
 
 const { data: list } = await useFetch(
-  () => props.url,
+  () => asset(props.url),
   {
     key: () => `list-${props.url}`,
     server: false,

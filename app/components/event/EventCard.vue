@@ -2,9 +2,9 @@
   <article class="event-card">
     <NuxtLink :to="`/events/${data.slug}`" class="event-card__link">
       <picture class="event-card__picture">
-        <source type="image/webp" :srcset="data.img_webp" />
+        <source type="image/webp" :srcset="asset(data.img_webp)" />
 
-        <img :src="data.img" :alt="data.alt" class="event-card__img" />
+        <img :src="asset(data.img)" :alt="data.alt" class="event-card__img" />
       </picture>
 
       <h4 class="event-card__title">{{ data.title }}</h4>
@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+const asset = useAsset();
   const props = defineProps({
     data: {
       type: Object,

@@ -27,7 +27,7 @@ const list = ref([]);
   const EVENTS_URL = "/json/events.json";
 
   const { data } = await useAsyncData(`upcoming`, () => {
-    return $fetch(EVENTS_URL);
+    return $fetch(useAsset()(EVENTS_URL));
   });
   if (data?.value) list.value = data.value;
 

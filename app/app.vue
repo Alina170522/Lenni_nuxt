@@ -11,6 +11,7 @@
   </div>
 </template>
 <script setup>
+const asset = useAsset();
 const store = useStore();
   useHead({
     htmlAttrs: {
@@ -58,18 +59,18 @@ const store = useStore();
       {
         rel: "shortcut icon",
         type: "image/vnd.microsoft.icon",
-        href: "/favicon/favicon.ico?v=1",
+        href: asset("/favicon/favicon.ico?v=1"),
       },
       {
         rel: "icon",
         type: "image/png",
-        href: "/favicon/favicon-32x32.png",
+        href: asset("/favicon/favicon-32x32.png"),
         sizes: "32x32",
       },
       {
         rel: "icon",
         type: "image/png",
-        href: "/favicon/favicon-16x16.png",
+        href: asset("/favicon/favicon-16x16.png"),
         sizes: "16x16",
       },
     ],

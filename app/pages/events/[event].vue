@@ -18,10 +18,10 @@
        
     
     <picture class="event__banner img">
-        <source type="image/webp" :srcset="data.img_webp" />
+        <source type="image/webp" :srcset="asset(data.img_webp)" />
 
         <img 
-        :src="data.img" 
+        :src="asset(data.img)" 
         :alt="data.alt"
         class="event__img" />
       </picture>
@@ -59,13 +59,14 @@
 </template>
 
 <script setup>
+const asset = useAsset();
 
 const route = useRoute()
 
 const slug = computed(() => String(route.params.event))
 
 const { data, pending, error } = await useFetch(
-  () => `/json/events/${slug.value}.json`,
+  () => asset(`/json/events/${slug.value}.json`),
   {
     key: () => `event-${slug.value}`,
     server: false,

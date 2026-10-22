@@ -19,7 +19,7 @@
           <ol-geom-point :coordinates="center"></ol-geom-point>
           <ol-style>
             <ol-style-icon
-              src="/icons/logo.svg"
+              :src="asset('/icons/logo.svg')"
               :size="[80, 58]"
             ></ol-style-icon>
           </ol-style>
@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+const asset = useAsset();
   import { fromLonLat } from "ol/proj";
   import { shiftKeyOnly } from "ol/events/condition";
 

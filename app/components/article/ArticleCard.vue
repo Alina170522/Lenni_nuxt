@@ -5,22 +5,22 @@
         <source
           type="image/webp"
           media="(max-width: 450px)"
-          :srcset="data.img_webp"
+          :srcset="asset(data.img_webp)"
         />
 
-        <source media="(max-width: 450px)" :srcset="data.img" />
+        <source media="(max-width: 450px)" :srcset="asset(data.img)" />
 
-        <source media="(max-width: 1169px)" :srcset="data.img_tablet" />
+        <source media="(max-width: 1169px)" :srcset="asset(data.img_tablet)" />
 
         <source
           type="image/webp"
           media="(max-width: 1169px)"
-          :srcset="data.img_tablet_webp"
+          :srcset="asset(data.img_tablet_webp)"
         />
-        <source media="(max-width: 1169px)" :srcset="data.img_tablet" />
+        <source media="(max-width: 1169px)" :srcset="asset(data.img_tablet)" />
 
-        <source type="image/webp" :srcset="data.img_webp" />
-        <img :src="data.img" :alt="data.alt" class="article-card__img" />
+        <source type="image/webp" :srcset="asset(data.img_webp)" />
+        <img :src="asset(data.img)" :alt="data.alt" class="article-card__img" />
       </picture>
     </a>
     <div class="article-card__info">
@@ -50,6 +50,7 @@
 </template>
 
 <script setup>
+const asset = useAsset();
 const props = defineProps({
   data: {
     type: Object,
