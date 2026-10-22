@@ -24,10 +24,10 @@ to="/events" class="app-upcoming__link"> Смотреть все</NuxtLink
 import { EventCard } from "#components";
 
 const list = ref([]);
-  const URL = "/json/events.json";
+  const EVENTS_URL = "/json/events.json";
 
   const { data } = await useAsyncData(`upcoming`, () => {
-    return $fetch(URL);
+    return $fetch(EVENTS_URL);
   });
   if (data?.value) list.value = data.value;
 

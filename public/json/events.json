@@ -19,8 +19,8 @@
   },
   {
     "slug": "sade",
-    "img": "/images/events/sade.jpg",
-    "img_webp": "/images/events/sade.webp",
+    "img": "/images/events/Sade.jpg",
+    "img_webp": "/images/events/Sade.webp",
     "alt": "Sade",
     "title": "Вечер | The Best of Sade",
     "description": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
@@ -46,7 +46,7 @@
   },
   {
     "slug": "hatters",
-    "img": "/images/events/hatters.jpg",
+    "img": "/images/events/hatteers.jpg",
     "img_webp": "/images/events/hatters.webp",
     "alt": "The Hatters",
     "title": "Повесилимся на славу на концерте The Hatters",
